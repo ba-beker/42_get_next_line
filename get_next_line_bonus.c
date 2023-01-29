@@ -1,29 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mobabeke <mobabeke@student.42wolfsburg.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 16:40:58 by mobabeke          #+#    #+#             */
-/*   Updated: 2023/01/29 09:57:48 by mobabeke         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
+#include<unistd.h>
+#include<stdio.h>
+#include<fcntl.h>
 #include "get_next_line.h"
 
 char	*get_next_line(int fd)
 {
-	static char	*stash;
+	static char	*stash[FOPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	stash = copy_to_stash(fd, stash);
-	if (!stash)
+	stash[FOPEN_MAX] = copy_to_stash(fd, stash[FOPEN_MAX]);
+	if (!stash[FOPEN_MAX])
 		return (NULL);
-	line = create_line(stash);
-	stash = what_next(stash);
+	line = create_line(stash[FOPEN_MAX]);
+	stash[FOPEN_MAX] = what_next(stash[FOPEN_MAX]);
 	return (line);
 }
 
