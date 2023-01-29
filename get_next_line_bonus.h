@@ -6,14 +6,22 @@
 /*   By: mobabeke <mobabeke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:36:08 by mobabeke          #+#    #+#             */
-/*   Updated: 2023/01/29 09:58:35 by mobabeke         ###   ########.fr       */
+/*   Updated: 2023/01/29 11:07:30 by mobabeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
 # include <stdlib.h>
 #include <limits.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<fcntl.h>
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *str, int c);

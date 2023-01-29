@@ -6,12 +6,17 @@
 /*   By: mobabeke <mobabeke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:14:34 by mobabeke          #+#    #+#             */
-/*   Updated: 2023/01/29 09:57:42 by mobabeke         ###   ########.fr       */
+/*   Updated: 2023/01/29 10:53:01 by mobabeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
 # include <stdlib.h>
 # include<unistd.h>
 

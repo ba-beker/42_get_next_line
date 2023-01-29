@@ -1,7 +1,16 @@
-#include<unistd.h>
-#include<stdio.h>
-#include<fcntl.h>
-#include "get_next_line.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mobabeke <mobabeke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/29 11:07:47 by mobabeke          #+#    #+#             */
+/*   Updated: 2023/01/29 11:09:36 by mobabeke         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
