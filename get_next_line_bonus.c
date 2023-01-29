@@ -6,7 +6,7 @@
 /*   By: mobabeke <mobabeke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:07:47 by mobabeke          #+#    #+#             */
-/*   Updated: 2023/01/29 11:09:36 by mobabeke         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:03:37 by mobabeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	stash[FOPEN_MAX] = copy_to_stash(fd, stash[FOPEN_MAX]);
-	if (!stash[FOPEN_MAX])
+	stash[fd] = copy_to_stash(fd, stash[fd]);
+	if (!stash[fd])
 		return (NULL);
-	line = create_line(stash[FOPEN_MAX]);
-	stash[FOPEN_MAX] = what_next(stash[FOPEN_MAX]);
+	line = create_line(stash[fd]);
+	stash[fd] = what_next(stash[fd]);
 	return (line);
 }
 
