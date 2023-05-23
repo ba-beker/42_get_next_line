@@ -10,7 +10,6 @@ This project was built using C programming language, and it demonstrates my prof
 Throughout the project, I leveraged my knowledge of C to implement the game logic, handle user input, render graphics, and manage game states. The code is organized into modules to ensure maintainability and readability. I also incorporated error handling to provide informative feedback to the user in case of any issues.
 
 ## Optimizations
-*(optional)*
 
 While working on this project, I focused on creating a functional and efficient game. I took the following optimization measures:
 
