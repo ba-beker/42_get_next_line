@@ -1,4 +1,4 @@
-# My Awesome Project
+# Get Next Line
 A simple project completed as part of the 42 school curriculum called "so_long." This project showcases my front-end development skills and involves creating a basic game using C programming language.
 
 <!-- ![alt tag](http://placecorgi.com/1200/650) -->
